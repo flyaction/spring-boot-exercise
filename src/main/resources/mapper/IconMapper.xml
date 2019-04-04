@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.imooc.firstappdemo.mapper.IconMapper">
+
+    <resultMap id="BaseResultMap" type="com.imooc.firstappdemo.entity.IconEntity">
+        <result column="id" jdbcType="INTEGER" property="id" />
+        <result column="iconUrl" jdbcType="VARCHAR" property="iconUrl" />
+        <result column="iconDesc" jdbcType="VARCHAR" property="iconDesc" />
+        <result column="catId" jdbcType="VARCHAR" property="catId" />
+        <result column="status" jdbcType="VARCHAR" property="status" />
+        <result column="createTime" jdbcType="DATE" property="createTime" />
+        <result column="updateTime" jdbcType="DATE" property="updateTime" />
+    </resultMap>
+
+    <select id="findById" resultMap="BaseResultMap">
+        select * from cp_icon where id = #{id}
+    </select>
+
+    <select id="findByPage" resultMap="BaseResultMap">
+        select * from cp_icon
+    </select>
+
+
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.imooc.firstappdemo.mapper.DataAppDpiMapper">
+  <resultMap id="BaseResultMap" type="com.imooc.firstappdemo.entity.DataAppDpi">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="id" jdbcType="INTEGER" property="id" />
+    <result column="tdid" jdbcType="VARCHAR" property="tdid" />
+    <result column="category" jdbcType="VARCHAR" property="category" />
+    <result column="appName" jdbcType="VARCHAR" property="appName" />
+    <result column="pkgName" jdbcType="VARCHAR" property="pkgName" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="host" jdbcType="VARCHAR" property="host" />
+    <result column="from" jdbcType="VARCHAR" property="from" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="woker" jdbcType="VARCHAR" property="woker" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+</mapper>

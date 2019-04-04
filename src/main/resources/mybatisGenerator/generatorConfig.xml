@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <!-- 生成的Java文件的编码 -->
+        <property name="javaFileEncoding" value="UTF-8"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.imooc.firstappdemo.util.MyMapper"/>
+        </plugin>
+
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/aidata?useUnicode=true&amp;characterEncoding=utf-8&amp;nullNamePatternMatchesAll=true&amp;serverTimezone=UTC"
+                        userId="root"
+                        password="1314">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="com.imooc.firstappdemo.entity" targetProject="src/main/java"/>
+
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
+
+        <javaClientGenerator targetPackage="com.imooc.firstappdemo.mapper" targetProject="src/main/java" type="XMLMAPPER"/>
+
+        <table tableName="data_app_dpi" delimitAllColumns="true">
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+    </context>
+</generatorConfiguration>
